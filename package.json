@@ -1,0 +1,30 @@
+{
+  "name": "inquiry-classifier",
+  "version": "1.0.0",
+  "description": "Интелигентна обработка на потребителски запитвания: хибридна класификация (правила + AI)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "dev:mock": "cross-env AI_PROVIDER=mock tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "demo": "tsx src/demo.ts",
+    "classify": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
